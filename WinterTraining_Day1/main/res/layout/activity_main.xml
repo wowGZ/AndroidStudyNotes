@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.wintertraining_lab.activity.MainActivity">
+
+    <Button
+        android:id="@+id/dialog_acticity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dialog Acticity"
+        android:textAllCaps="false"
+        android:onClick="onClick"
+        />
+
+    <Button
+        android:id="@+id/acticity_learning"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Acticity Learning"
+        android:textAllCaps="false"
+        android:onClick="onClick"
+        />
+
+</LinearLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.wintertraining_lab.activity.DialogActivity">
+
+    <Button
+        android:id="@+id/showDialogButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ShowDialog"
+        android:textAllCaps="false"
+        android:onClick="onClick"/>
+    <Button
+        android:id="@+id/showListDialogButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="ShowListDialog"
+        android:onClick="onClick"/>
+    <Button
+        android:id="@+id/showSingleChoiceDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ShowSingleChoiceDialog"
+        android:textAllCaps="false"
+        android:onClick="onClick"/>
+    <Button
+        android:id="@+id/showCustomDialogButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="showCustomDialogButton"
+        android:textAllCaps="false"
+        android:onClick="onClick"/>
+</LinearLayout>
