@@ -49,3 +49,38 @@ Activity类中定义了七个回调方法，覆盖了活动生命周期的每一
 1. 完整生存期：活动在onCreate()和onDestory()之间所经历的过程，就是完整生存期。一般一个活动会在onCreate()方法中进行初始化操作，而在onDestory()中完成释放内存的操作。
 2. 可见生存期：活动在onStart()和onStop()之间所经历的过程，就是可见生存期。，在这段期间里面，活动对于用户来说总是可见的。我们可以通过这两个方法来合理的管理那些对用户可见的资源。比如：在onStart()方法中对资源进行加载，而在onStop()方法中对资源进行释放，从而保持处于停止状态的活动不会占用太多的内存。
 3. 前台生存期：活动在onResume()和onPause()之间所经历的过程，就是前台生存期。在这段期间里面，活动总是处于运行状态，此时的活动是可以和用户进行交互的，平时看到和接触的最多的也是这类活动。
+
+### 活动被回收了怎么班办
+
+一旦活动进入了停止状态非常容易被回收。但是如果我们活动中还存在这我们所需要的数据，但是活动却被回收了怎么办？
+
+在Activity类中还为我们提供了一个onSaveInstanceState()的回调方法，这个方法保证活动在被销毁之前一定会被调用，所以我们可以通过使用这个方法来确保我们的数据在活动被销毁之前得到保存。
+
+onSaveInstanceState()方法中携带了一个Bundle参数，而Bundle提供了一系列的方法用于保存数据，比如可以用putString()方法来保存字符串，以此类推。每个保存方法都需要两个参数，一个是键，用于之后从Bundle中取值，另一个则是真正要保存的值。
+
+在MainActivity中添加如下代码就可以将临时数据进行保存：
+
+```java
+@Override
+protected void onSaveInstanceState(Bundle outState) {
+  super.onSaveInstanceState(outState);
+  String tempData = "Something you have just typed";
+  outState.putString("data_key", tempData);
+}
+```
+
+数据已经进行了保存，但是该如何恢复呢？仔细观察其实可以发现，在onCreate()方法中其实也有一个Bundle参数，而这个参数在一般情况下所保存的都是null，但是如果在活动销毁之前是用onSaveInstanceState()方法进行了数据的保存，那么这个参数中就会保存之前在方法中保存的临时数据，我们也就可以用过正常的方法将数据进行回调，就可以起到了数据保存的作用。
+代码如下：
+
+```java
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+  super.onCreate(savedInstanceState);
+  Log.d(TAG, "onCreate");
+  setContentView(R.layout.activity_main);
+  if (savedInstanceState != null) {
+    String tempData = savedInstanceState.getString("data_key");
+    Log.d(TAG, tempData);
+  }
+}
+```
