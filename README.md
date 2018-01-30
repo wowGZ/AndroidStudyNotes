@@ -12,3 +12,5 @@ Some study note about my Android studying
 #### 2.1 [UI-常用控件](https://github.com/wowGZ/AndroidStudyNotes/blob/master/NotesAboutTheCodeOfTheFirstLine/NotesAboutUI/UI-%E5%B8%B8%E7%94%A8%E6%8E%A7%E4%BB%B6.md)
 #### 2.2 [UI-基本布局](https://github.com/wowGZ/AndroidStudyNotes/blob/master/NotesAboutTheCodeOfTheFirstLine/NotesAboutUI/UI-%E5%9F%BA%E6%9C%AC%E5%B8%83%E5%B1%80.md)
 #### 2.3 [UI-自定义控件](https://github.com/wowGZ/AndroidStudyNotes/blob/master/NotesAboutTheCodeOfTheFirstLine/NotesAboutUI/UI-%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8E%A7%E4%BB%B6.md)
+#### 2.4[UI-ListView](https://github.com/wowGZ/AndroidStudyNotes/blob/master/NotesAboutTheCodeOfTheFirstLine/NotesAboutUI/UI-ListView.md)
+#### 2.5[UI-RecyclerView](https://github.com/wowGZ/AndroidStudyNotes/blob/master/NotesAboutTheCodeOfTheFirstLine/NotesAboutUI/UI-RecyclerView.md)
